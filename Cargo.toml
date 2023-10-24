@@ -1,0 +1,8 @@
+[workspace]
+members = [
+#    "bbhash2_perf",
+#    "map_cram_perf",
+#    "pdbs_tabs",
+    "puzzles",
+    "pdbs_benchmark"
+]

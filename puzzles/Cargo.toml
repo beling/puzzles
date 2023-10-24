@@ -1,0 +1,22 @@
+[package]
+name = "puzzles"
+version = "0.1.0"
+authors = ["Piotr Beling <piotr.beling@wmii.uni.lodz.pl>"]
+edition = "2021"
+license = "LGPL-3.0-or-later"
+description = "The library for solving puzzles like sliding puzzle."
+documentation = "https://docs.rs/puzzles"
+repository = "https://github.com/beling/puzzles"
+readme = "README.md"
+include = [ "**/*.rs", "Cargo.toml", "README.md" ]
+categories = ["algorithms", "game-development", "mathematics", "science"]
+keywords = [ "puzzle", "solver", "sliding-puzzle", "15-puzzle", "pattern-db" ]
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ph = "0.8"
+csf = "0.1"
+bitm = "0.2"
+arrayvec = "0.7.*"

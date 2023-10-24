@@ -1,0 +1,1 @@
+`pdbs_benchmark` is a console program for testing the effectiveness of different pattern database implementations in solving [combination puzzles](https://en.wikipedia.org/wiki/Combination_puzzle), developed by [Piotr Beling](http://pbeling.w8.pl/).
