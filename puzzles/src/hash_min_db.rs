@@ -7,9 +7,13 @@ use std::convert::TryInto;
 /// PDBS that maps abstract positions to array cells with hasher
 /// and stores minimum distance of abstract positions assigned to each cell.
 pub struct HashMinPatternDB<S: BuildHasher = BuildHasherDefault<DefaultHasher>> {
+    /// Array of values, each stored at `bit_per_cell` bits.
     cells: Box<[u64]>,
+    /// Number of bits per value in `cells`.
     bit_per_cell: u8,
+    /// Number of values in `cells`.
     num_of_cells: usize,
+    /// Used to hash keys to fragments (values) in cells.
     hasher: S,
 }
 
@@ -63,11 +67,11 @@ impl<S: BuildHasher> HashMinPatternDB<S> {
 }
 
 impl HashMinPatternDB {
-    fn new(num_of_cells: usize, bit_per_cell: u8) -> Self {
+    pub fn new(num_of_cells: usize, bit_per_cell: u8) -> Self {
         Self::with_hasher(num_of_cells, bit_per_cell, Default::default())
     }
 
-    fn with_maxvalue(num_of_cells: usize, bit_per_cell: u8, maxvalue: u64) -> Self {
+    pub fn with_maxvalue(num_of_cells: usize, bit_per_cell: u8, maxvalue: u64) -> Self {
         Self::with_maxvalue_hasher(num_of_cells, bit_per_cell, maxvalue, Default::default())
     }
 }
